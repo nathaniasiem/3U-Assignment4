@@ -45,6 +45,9 @@ public class A4Q4 {
         //variable for miscellaneous costs
         int misc = input.nextInt();
         //determine the total cost
-        
+        int total = food+dj+hall+decor+staff+misc;
+        System.out.println("The total cost is $" +total +".");
+        //instruct user to calculate the number of tickets
+        System.out.println("Now that you calculated the total cost,acnswer the following questions to calculate for the break even in tickets.");
     }
 }
