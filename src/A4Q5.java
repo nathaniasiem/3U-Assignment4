@@ -50,7 +50,27 @@ public class A4Q5 {
         System.out.println("What mark did you get? ");
         int mark5 = input.nextInt();
         //determine the test 1 score
-       
+        int tScore1 = mark1*100/test1;
+        //determine the test 2 score
+        double tScore2 = mark2*100/test2;
+        //determine the test 3 score
+        double tScore3 = mark3*100/test3;
+        //determine the test 4 score
+        double tScore4 = mark4*100/test4;
+        //determine the test 5 score
+        double tScore5 = mark5*100/test5;
+        //determine the average
+        double avg = (tScore1+tScore2+tScore3+tScore4+tScore5)/5;
+        
+        //
+        System.out.println("Test Scores for "+name);
+        System.out.println("Test 1: "+tScore1 +"%");
+        System.out.println("Test 2: "+tScore2 +"%");
+        System.out.println("Test 3: "+tScore3 +"%");
+        System.out.println("Test 4: "+tScore4 +"%");
+        System.out.println("Test 5: "+tScore5 +"%");
+        System.out.println("Average: "+avg +"%");
+                
       
                 
         
