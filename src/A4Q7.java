@@ -29,9 +29,9 @@ public class A4Q7 {
             //variable for current spot
             int currentSQ = input.nextInt();
             //calculate current spot
-            int currentSQ =dice+;
+            int move =dice+1;
             //tell user current spot on board
-            System.out.println("You are on square "+currentSQ+".");
+            System.out.println("You are on square "+move+".");
             
             
             
