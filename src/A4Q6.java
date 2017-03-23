@@ -30,17 +30,14 @@ public class A4Q6 {
         int radar = cSpeed - spLimit;
 
         //Determine if car is within speed limit
-        if (radar>=31){
+        if (radar >= 31) {
             System.out.println("You are speeding! Your fine is $500.");
-        }else if (radar>=21){
+        } else if (radar >= 21) {
             System.out.println("You are speeding! Your fine is $270.");
-        }else if (radar>=1){
+        } else if (radar >= 1) {
             System.out.println("You are speeding!Your fine is $100.");
-        }else{
+        } else {
             System.out.println("Congratulations, you are within the speed limit!");
         }
-        
-          
-        
     }
 }
