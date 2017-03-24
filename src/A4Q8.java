@@ -104,8 +104,9 @@ public class A4Q8 extends javax.swing.JFrame {
     }//GEN-LAST:event_nameInputActionPerformed
 
     private void helloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helloActionPerformed
-        // take user input from textbox"nameInput" and output onto screen
+        // take user input from textbox "nameInput" 
         String name = nameInput.getText();
+        //output text into textbox "output"
         output.setText("Hello "+name);
     }//GEN-LAST:event_helloActionPerformed
 
