@@ -26,11 +26,8 @@ public class A4Q7 {
             System.out.println("Enter sum of dice: ");
             //variable for sum of dice
             int dice = input.nextInt();
-            //variable for current spot
-            int currentSQ = input.nextInt();
             //calculate current spot
-            int move =dice+1;
-            //tell user current spot on board
+            int move = dice+1;
             System.out.println("You are on square "+move+".");
             
             
