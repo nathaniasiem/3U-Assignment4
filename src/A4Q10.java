@@ -26,21 +26,101 @@ public class A4Q10 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fahr = new javax.swing.JLabel();
+        fah = new javax.swing.JTextField();
+        FtoC = new javax.swing.JButton();
+        cels = new javax.swing.JLabel();
+        cel = new javax.swing.JTextField();
+        CtoF = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("temperature converter");
+
+        fahr.setText("Degrees Fahrenheit");
+
+        FtoC.setText("F -> C");
+        FtoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FtoCActionPerformed(evt);
+            }
+        });
+
+        cels.setText("Degrees Celsius");
+
+        CtoF.setText("C -> F");
+        CtoF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CtoFActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fahr)
+                    .addComponent(cels))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(fah, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(cel))
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FtoC)
+                    .addComponent(CtoF))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fahr)
+                    .addComponent(fah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FtoC))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cels)
+                    .addComponent(cel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CtoF))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void FtoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FtoCActionPerformed
+        // take user input as string
+        String fahrText = fah.getText();
+                
+        //convert string into integer
+        int degreeF = Integer.parseInt(fahrText);
+                
+        //do conversion from fahrenheit to celsius
+        int convertC = (degreeF-32)*5/9;
+        
+        //output result as celsius
+        cel.setText(String.valueOf(convertC));
+        
+    }//GEN-LAST:event_FtoCActionPerformed
+
+    private void CtoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CtoFActionPerformed
+        // take user input as string
+        String celsText = cel.getText();
+        
+        //convert string into integer
+        int degreeC = Integer.parseInt(celsText);
+        
+        //do conversion from celsius to fahrenheit
+        int convertF = degreeC*9/5+32;
+        
+        //output result as fahrenheit
+        fah.setText(String.valueOf(convertF));
+        
+    }//GEN-LAST:event_CtoFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +158,11 @@ public class A4Q10 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CtoF;
+    private javax.swing.JButton FtoC;
+    private javax.swing.JTextField cel;
+    private javax.swing.JLabel cels;
+    private javax.swing.JTextField fah;
+    private javax.swing.JLabel fahr;
     // End of variables declaration//GEN-END:variables
 }
